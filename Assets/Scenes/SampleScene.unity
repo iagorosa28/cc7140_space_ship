@@ -336,7 +336,8 @@ Transform:
   m_LocalPosition: {x: -2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1346962762}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &165613461
@@ -353,8 +354,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   moveUp: 273
   moveDown: 274
+  moveRight: 275
+  moveLeft: 276
   movingSpeed: 5
   verticalBound: 3.5
+  horizontalBound: 4.5
+  tiroPrefab: {fileID: 3907042582726541125, guid: bbeb9ab87d97c6a42b1eef96cce34c66, type: 3}
+  firePoint: {fileID: 1346962762}
 --- !u!50 &165613462
 Rigidbody2D:
   serializedVersion: 5
@@ -857,6 +863,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   parallaxEffect: 1
+--- !u!1 &1346962761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346962762}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346962762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346962761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 165613460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748682597
 GameObject:
   m_ObjectHideFlags: 0
