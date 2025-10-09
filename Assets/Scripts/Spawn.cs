@@ -26,7 +26,10 @@ public class Spawn : MonoBehaviour
             if (randomPoint != 1)
             {
                 gerarInimigo();
-                waitTime -= 0.001f;
+                if(waitTime > 0)
+                {
+                    waitTime -= 0.01f;
+                }
             }
         }
 
