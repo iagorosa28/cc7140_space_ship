@@ -4,7 +4,7 @@ public class Parallax : MonoBehaviour
 {
 
     private float lenght;
-    private float movingSpeed = 5f;
+    public static float movingSpeed = 1f;
     public float parallaxEffect;
     void Start()
     {
@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime * parallaxEffect;
+        transform.position += Vector3.left * Time.deltaTime * movingSpeed * parallaxEffect;
         if (transform.position.x < -lenght)
         {
             transform.position = new Vector3(lenght, transform.position.y, transform.position.z);
