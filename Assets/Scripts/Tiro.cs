@@ -21,7 +21,7 @@ public class Tiro : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
             GameManager.AddScore(10);
-            Parallax.movingSpeed += 1.0f;
+            Parallax.movingSpeed += 0.5f;
         }
     }
 }

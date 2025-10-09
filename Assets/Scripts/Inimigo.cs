@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 {
-    private float movingSpeed = 2.5f;
+    public static float movingSpeed = 2.5f;
     private float verticalBound = 3.5f;
     private float horizontalBound = 4.5f;
     private Vector2 direction;
@@ -20,13 +20,13 @@ public class Inimigo : MonoBehaviour
 
         if(position.x > horizontalBound || position.x < -horizontalBound)
         {
-            movingSpeed += 0.2f;
+            movingSpeed += 0.1f;
             direction.x *= -1;
             position.x = Mathf.Clamp(position.x, -horizontalBound, horizontalBound);
         }
         if(position.y > verticalBound || position.y < -verticalBound)
         {
-            movingSpeed += 0.2f;
+            movingSpeed += 0.1f;
             direction.y *= -1;
             position.y = Mathf.Clamp(position.y, -verticalBound, verticalBound);
         }

@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour
     public Transform point3;
 
     private float timer = 0.0f;
-    public float waitTime = 1.0f;
+    public static float waitTime = 1.0f;
 
     private void Start()
     {

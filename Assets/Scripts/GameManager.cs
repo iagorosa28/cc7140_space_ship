@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour
     public static void AddScore(int amount)
     {
         Score += amount;
-        if(Score >= 200)
+        if(Score >= 500)
         {
+            Parallax.movingSpeed = 1;
+            Spawn.waitTime = 1.0f;
+            Inimigo.movingSpeed = 2.5f;
             SceneLoader.LoadVictory();
         }
     }
@@ -28,6 +31,9 @@ public class GameManager : MonoBehaviour
         Lives--;
         if(Lives <= 0)
         {
+            Parallax.movingSpeed = 1;
+            Spawn.waitTime = 1.0f;
+            Inimigo.movingSpeed = 2.5f;
             SceneLoader.LoadGameOver();
         }
     }

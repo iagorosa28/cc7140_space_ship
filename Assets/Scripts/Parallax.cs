@@ -14,7 +14,7 @@ public class Parallax : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.left * Time.deltaTime * movingSpeed * parallaxEffect;
-        if (transform.position.x < -lenght)
+        if (transform.position.x < -lenght+1)
         {
             transform.position = new Vector3(lenght, transform.position.y, transform.position.z);
         }
