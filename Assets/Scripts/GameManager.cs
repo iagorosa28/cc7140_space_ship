@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
         if(Lives <= 0)
         {
             Score = 0; Lives = 3; Spawn.waitTime = 1.0f;
-            // SceneManager.LoadScene("Lose");
         }
     }
 
@@ -40,7 +39,6 @@ public class GameManager : MonoBehaviour
         if (GUI.Button(new Rect(Screen.width / 2 - 60, 20, 120, 40), "Restart"))
         {
             Score = 0; Lives = 3; Spawn.waitTime = 1.0f;
-            // SceneManager.LoadScene("Level1");
         }
     }
 }
